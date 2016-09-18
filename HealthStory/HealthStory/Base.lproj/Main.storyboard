@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="lhQ-rZ-Lgj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="lhQ-rZ-Lgj">
                                 <rect key="frame" x="265" y="53" width="69" height="93"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoname" translatesAutoresizingMaskIntoConstraints="NO" id="n3O-dQ-GmQ">
@@ -210,13 +210,13 @@
                                             <segue destination="3qE-ie-93P" kind="show" identifier="goToH" id="fXQ-n9-ZtP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPi-yR-vnU">
-                                        <rect key="frame" x="20" y="15" width="34" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPi-yR-vnU">
+                                        <rect key="frame" x="-5" y="15" width="159" height="30"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.95294117649999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="HlE-1W-7R1" kind="show" id="hzU-L4-cU4"/>
+                                            <segue destination="HlE-1W-7R1" kind="show" id="wXW-er-Wsa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -224,8 +224,6 @@
                                 <constraints>
                                     <constraint firstItem="OCD-LJ-O6P" firstAttribute="centerY" secondItem="Tzs-pE-us8" secondAttribute="centerY" id="3Bp-yV-ERU"/>
                                     <constraint firstAttribute="trailing" secondItem="OCD-LJ-O6P" secondAttribute="trailing" constant="20" id="E0E-o5-AFc"/>
-                                    <constraint firstItem="oPi-yR-vnU" firstAttribute="leading" secondItem="Tzs-pE-us8" secondAttribute="leading" constant="20" id="Jfh-tp-0Zn"/>
-                                    <constraint firstItem="oPi-yR-vnU" firstAttribute="centerY" secondItem="Tzs-pE-us8" secondAttribute="centerY" id="Kdu-1n-xcg"/>
                                     <constraint firstItem="OCD-LJ-O6P" firstAttribute="leading" secondItem="Tzs-pE-us8" secondAttribute="leading" constant="20" id="qdl-9Z-bRK"/>
                                 </constraints>
                                 <variation key="default">
@@ -380,14 +378,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-Cf-JGF">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-Cf-JGF">
                                 <rect key="frame" x="0.0" y="34" width="600" height="30"/>
-                                <state key="normal" title="Add"/>
+                                <state key="normal" title="Add" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="btnPress:" destination="3qE-ie-93P" eventType="touchUpInside" id="0BR-PZ-AQf"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rcb-h4-zz8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rcb-h4-zz8">
                                 <rect key="frame" x="0.0" y="80" width="600" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -461,6 +461,6 @@
         <image name="theGuy" width="121" height="121"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hzU-L4-cU4"/>
+        <segue reference="pNi-oZ-CB6"/>
     </inferredMetricsTieBreakers>
 </document>
