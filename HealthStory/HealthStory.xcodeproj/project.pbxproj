@@ -10,7 +10,7 @@
 		2F20FE501D8E3A36005FE3FE /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FE4F1D8E3A36005FE3FE /* ApiConstants.swift */; };
 		2F20FE521D8E80A6005FE3FE /* FamilyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FE511D8E80A6005FE3FE /* FamilyVC.swift */; };
 		2F20FE541D8E85ED005FE3FE /* FirstHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FE531D8E85ED005FE3FE /* FirstHomeVC.swift */; };
-		2FB708B91D8E26AB005DEF9A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB708B81D8E26AB005DEF9A /* HomeVC.swift */; };
+		2FB708B91D8E26AB005DEF9A /* SelectHighlightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB708B81D8E26AB005DEF9A /* SelectHighlightVC.swift */; };
 		C33E1142AF13402E23EAE524 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332C29625222A97948E4020C /* Pods.framework */; };
 		CB132DED1D8DE7350091F76F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB132DEC1D8DE7350091F76F /* AppDelegate.swift */; };
 		CB132DF41D8DE7350091F76F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB132DF21D8DE7350091F76F /* Main.storyboard */; };
@@ -57,7 +57,7 @@
 		2F20FE4F1D8E3A36005FE3FE /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		2F20FE511D8E80A6005FE3FE /* FamilyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyVC.swift; sourceTree = "<group>"; };
 		2F20FE531D8E85ED005FE3FE /* FirstHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstHomeVC.swift; sourceTree = "<group>"; };
-		2FB708B81D8E26AB005DEF9A /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		2FB708B81D8E26AB005DEF9A /* SelectHighlightVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectHighlightVC.swift; sourceTree = "<group>"; };
 		332C29625222A97948E4020C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A48CF7B608C3062B0A37824 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CB132DE91D8DE7350091F76F /* HealthStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +150,7 @@
 			children = (
 				CB132DEC1D8DE7350091F76F /* AppDelegate.swift */,
 				CB132DF21D8DE7350091F76F /* Main.storyboard */,
-				2FB708B81D8E26AB005DEF9A /* HomeVC.swift */,
+				2FB708B81D8E26AB005DEF9A /* SelectHighlightVC.swift */,
 				2F20FE511D8E80A6005FE3FE /* FamilyVC.swift */,
 				CB132DF51D8DE7350091F76F /* Assets.xcassets */,
 				CB132DF71D8DE7350091F76F /* LaunchScreen.storyboard */,
@@ -367,7 +367,7 @@
 				CB132DED1D8DE7350091F76F /* AppDelegate.swift in Sources */,
 				2F20FE541D8E85ED005FE3FE /* FirstHomeVC.swift in Sources */,
 				2F20FE521D8E80A6005FE3FE /* FamilyVC.swift in Sources */,
-				2FB708B91D8E26AB005DEF9A /* HomeVC.swift in Sources */,
+				2FB708B91D8E26AB005DEF9A /* SelectHighlightVC.swift in Sources */,
 				2F20FE501D8E3A36005FE3FE /* ApiConstants.swift in Sources */,
 				CB132E2D1D8DF2A10091F76F /* IndividualStoryVC.swift in Sources */,
 				CB91C7661D8E0EAC00A899F3 /* FHIRManager.swift in Sources */,

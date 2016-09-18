@@ -31,11 +31,11 @@ class FamilyVC : UIViewController {
     familyCollectionView.dataSource = self
     familyCollectionView.delegate = self
     
-    family.append(FamilyMember(name: "Kevin", image: UIImage(named: "theGuy"), id: ""))
-    family.append(FamilyMember(name: "Emilie", image: UIImage(named: "theGuy"), id: ""))
-    family.append(FamilyMember(name: "Katie", image: UIImage(named: "theGuy"), id: ""))
-    family.append(FamilyMember(name: "Seamus", image: UIImage(named: "theGuy"), id: ""))
-    family.append(FamilyMember(name: "Nora", image: UIImage(named: "theGuy"), id: ""))
+    family.append(FamilyMember(name: "Kevin", image: UIImage(named: "theGuy"), id: "967332"))
+    family.append(FamilyMember(name: "Emilie", image: UIImage(named: "theGuy"), id: "1551992"))
+    family.append(FamilyMember(name: "Katie", image: UIImage(named: "theGuy"), id: "1032702"))
+    family.append(FamilyMember(name: "Seamus", image: UIImage(named: "theGuy"), id: "99912345"))
+    family.append(FamilyMember(name: "Nora", image: UIImage(named: "theGuy"), id: "1134281"))
     
     familyCollectionView.reloadData()
     
@@ -43,7 +43,9 @@ class FamilyVC : UIViewController {
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "toTheGuy" {
-      sender.guyName.text
+      let cell = sender as! CellGuy
+      let vc = segue.destinationViewController as! IndividualStoryVC
+      vc.fM = cell.fM
     }
   }
   
@@ -65,7 +67,8 @@ extension FamilyVC : UICollectionViewDataSource, UICollectionViewDelegate {
     
     cell.guyPicture.image = family[indexPath.row].image
     cell.guyName.text = family[indexPath.row].name
-
+    cell.fM = family[indexPath.row]
+    
     return cell
   }
   
@@ -77,5 +80,6 @@ class CellGuy : UICollectionViewCell {
   
   @IBOutlet weak var guyPicture: UIImageView!
   @IBOutlet weak var guyName: UILabel!
+  var fM : FamilyMember?
   
 }

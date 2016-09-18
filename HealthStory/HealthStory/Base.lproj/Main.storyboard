@@ -184,7 +184,7 @@
         <!--Individual StoryVC-->
         <scene sceneID="ua8-Uw-rT1">
             <objects>
-                <viewController id="RrU-08-cFT" customClass="IndividualStoryVC" sceneMemberID="viewController">
+                <viewController id="RrU-08-cFT" customClass="IndividualStoryVC" customModule="HealthStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n8d-kv-lhB"/>
                         <viewControllerLayoutGuide type="bottom" id="Xoz-tK-rZF"/>
@@ -231,6 +231,19 @@
                                 <rect key="frame" x="0.0" y="219" width="600" height="381"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sx1-M3-wsb">
+                                <rect key="frame" x="403" y="166" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCD-LJ-O6P">
+                                <rect key="frame" x="148" y="158" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <segue destination="3qE-ie-93P" kind="show" identifier="goToH" id="fXQ-n9-ZtP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -276,10 +289,33 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="OCD-LJ-O6P" id="zH1-SY-ppa"/>
+                        <outlet property="name" destination="sx1-M3-wsb" id="9v5-sU-dOf"/>
+                        <outlet property="picture" destination="MTz-2r-d4E" id="HhT-9k-l4H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBW-iU-1Ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2020" y="-658"/>
+        </scene>
+        <!--Select HighlightVC-->
+        <scene sceneID="5xh-De-wwK">
+            <objects>
+                <viewController id="3qE-ie-93P" customClass="SelectHighlightVC" customModule="HealthStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5km-GK-OYb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y7l-rM-4Q5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Bq-y4-dFV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5X-Yl-Qrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2699" y="-658"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="llP-yd-ba6">

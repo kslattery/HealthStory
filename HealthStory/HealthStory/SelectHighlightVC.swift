@@ -11,8 +11,9 @@ import Alamofire
 import SwiftyJSON
 
 
-class HomeVC : UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class SelectHighlightVC : UIViewController, UITableViewDataSource, UITableViewDelegate {
+  
+    var prevVC : IndividualStoryVC?
     var tableView:UITableView?
     var items : [String] = []
     var selectedConditionsArray : [String] = []
@@ -30,12 +31,16 @@ class HomeVC : UIViewController, UITableViewDataSource, UITableViewDelegate {
         let btn = UIButton(frame: CGRect(x: 0, y: 25, width: self.view.frame.width, height: 50))
         btn.backgroundColor = UIColor.cyanColor()
         btn.setTitle("Done", forState: UIControlState.Normal)
-        btn.addTarget(self, action: "completeSelection", forControlEvents: UIControlEvents.TouchUpInside)
+        btn.addTarget(self, action: #selector(SelectHighlightVC.completeSelection), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(btn)
     }
     
     func completeSelection () {
-        
+        prevVC?.selectedConditionsArray = self.selectedConditionsArray
+        prevVC?.onSelectionChange()
+       self.dismissViewControllerAnimated(true, completion: nil)
+      
+      
     }
     
     func addFHIRData() {
@@ -51,7 +56,7 @@ class HomeVC : UIViewController, UITableViewDataSource, UITableViewDelegate {
             for condition in conditions {
                 let coding = condition.1["resource"]["code"]["coding"]
                 for entry in coding {
-                    print(entry.1["display"])
+                    //print(entry.1["display"])
                     self.items.append("\(entry.1["display"])")
                     
                 }
