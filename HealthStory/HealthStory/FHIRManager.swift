@@ -6,26 +6,41 @@
 //  Copyright © 2016 StoryTellers. All rights reserved.
 //
 
-import Foundation
-
 import Alamofire
-//import SwiftyJSON
-import Alamofire_SwiftyJSON
+import SwiftyJSON
 
 
-class FHIRManager: NSObject
-{
-    func initialize() {
-        Alamofire.request(.GET, "https://fhir-dstu2.smarthealthit.org/Patient", parameters: ["name": "Coleman"]).responseSwiftyJSON({ (request, response, json, error)})
-            completionHandler: <#T##Response<JSON, NSError> -> Void#>)
-        
-
-            
-            
-//            .responseSwiftyJSON({ (request, response, json, error) in
-//                println(json)
-//                println(error)
-//            })
+class FHIRManager {
+  
+  
+  
+  static func initialize() {
+    let headers = kAPIHEADER
+    var url = kAPIURL
+    url += "/Patient"
+    
+    Alamofire.request(.GET, url, parameters: ["name":"Coleman"], headers: headers).responseJSON { response in
+      
+      
+      if let status = response.response?.statusCode {
+        let json = JSON(data: response.data!)
+        if status == 200 {
+          print(response)
+        }
+        else {
+          if let message = json["detail"].string {
+            print(message)
+          }
+          else {
+            print("No known error")
+          }
+        }
+      } else {
+        print("no valid status code")
+        print(response)
+      }
     }
+  }
+  
 }
 

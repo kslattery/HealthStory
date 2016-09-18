@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F20FE501D8E3A36005FE3FE /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FE4F1D8E3A36005FE3FE /* ApiConstants.swift */; };
 		2FB708B91D8E26AB005DEF9A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB708B81D8E26AB005DEF9A /* HomeVC.swift */; };
 		C33E1142AF13402E23EAE524 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332C29625222A97948E4020C /* Pods.framework */; };
 		CB132DED1D8DE7350091F76F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB132DEC1D8DE7350091F76F /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F20FE4F1D8E3A36005FE3FE /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		2FB708B81D8E26AB005DEF9A /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		332C29625222A97948E4020C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A48CF7B608C3062B0A37824 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				CB132DFA1D8DE7350091F76F /* Info.plist */,
 				CB132E2C1D8DF2A10091F76F /* IndividualStory.swift */,
 				CB91C7651D8E0EAC00A899F3 /* FHIRManager.swift */,
+				2F20FE4F1D8E3A36005FE3FE /* ApiConstants.swift */,
 			);
 			path = HealthStory;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			files = (
 				CB132DED1D8DE7350091F76F /* AppDelegate.swift in Sources */,
 				2FB708B91D8E26AB005DEF9A /* HomeVC.swift in Sources */,
+				2F20FE501D8E3A36005FE3FE /* ApiConstants.swift in Sources */,
 				CB132E2D1D8DF2A10091F76F /* IndividualStory.swift in Sources */,
 				CB91C7661D8E0EAC00A899F3 /* FHIRManager.swift in Sources */,
 			);
