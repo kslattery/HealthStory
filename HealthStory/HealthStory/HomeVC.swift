@@ -83,7 +83,6 @@ class HomeVC : UIViewController, UITableViewDataSource, UITableViewDelegate {
  //       FHIRManager.instance.getConditions("1551992", onCompletion: conditions)
         FHIRManager.instance.getProcedures("1551992")
         FHIRManager.instance.getMedicationStatement("1551992")
-        
     }
     
 }

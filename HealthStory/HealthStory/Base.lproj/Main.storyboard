@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--HomeVC-->
@@ -16,12 +17,87 @@
                     <view key="view" contentMode="scaleToFill" id="Gz1-QQ-3ch">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="lhQ-rZ-Lgj">
+                                <rect key="frame" x="265" y="53" width="69" height="93"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoname" translatesAutoresizingMaskIntoConstraints="NO" id="n3O-dQ-GmQ">
+                                <rect key="frame" x="156" y="156" width="287" height="51"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptZ-7f-2p1">
+                                <rect key="frame" x="150" y="243" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="hB6-L8-gwq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hB6-L8-gwq"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P5z-EN-gfg">
+                                <rect key="frame" x="149.5" y="291" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEP-Yz-T5x">
+                                <rect key="frame" x="150" y="340" width="300" height="50"/>
+                                <state key="normal" title="Sign in" backgroundImage="button">
+                                    <color key="titleShadowColor" red="0.59542043585526316" green="0.71372549019607845" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HlE-1W-7R1" kind="show" id="pNi-oZ-CB6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.71372549019607845" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ptZ-7f-2p1" firstAttribute="width" secondItem="Gz1-QQ-3ch" secondAttribute="width" multiplier="0.5" id="4zW-Ud-TX4"/>
+                            <constraint firstItem="P5z-EN-gfg" firstAttribute="centerX" secondItem="Gz1-QQ-3ch" secondAttribute="centerX" id="8Ii-Y9-Su3"/>
+                            <constraint firstItem="P5z-EN-gfg" firstAttribute="top" secondItem="ptZ-7f-2p1" secondAttribute="bottom" constant="18" id="BFO-nP-Hth"/>
+                            <constraint firstItem="n3O-dQ-GmQ" firstAttribute="centerX" secondItem="Gz1-QQ-3ch" secondAttribute="centerX" id="D4i-Rr-wrz"/>
+                            <constraint firstItem="lhQ-rZ-Lgj" firstAttribute="top" secondItem="CVS-0Y-dEs" secondAttribute="bottom" constant="33.5" id="EhD-ks-cAy"/>
+                            <constraint firstItem="aEP-Yz-T5x" firstAttribute="top" secondItem="P5z-EN-gfg" secondAttribute="bottom" constant="19" id="KIM-8e-QWx"/>
+                            <constraint firstItem="aEP-Yz-T5x" firstAttribute="width" secondItem="Gz1-QQ-3ch" secondAttribute="width" multiplier="0.5" id="KVW-4l-rpt"/>
+                            <constraint firstItem="ptZ-7f-2p1" firstAttribute="centerX" secondItem="Gz1-QQ-3ch" secondAttribute="centerX" id="Y6M-af-kXG"/>
+                            <constraint firstItem="n3O-dQ-GmQ" firstAttribute="width" secondItem="Gz1-QQ-3ch" secondAttribute="width" multiplier="0.6" id="chh-Un-q9K"/>
+                            <constraint firstItem="n3O-dQ-GmQ" firstAttribute="top" secondItem="lhQ-rZ-Lgj" secondAttribute="bottom" constant="10" id="dXC-Cp-SdA"/>
+                            <constraint firstItem="ptZ-7f-2p1" firstAttribute="top" secondItem="n3O-dQ-GmQ" secondAttribute="bottom" constant="36" id="doG-2i-5m0"/>
+                            <constraint firstItem="lhQ-rZ-Lgj" firstAttribute="centerY" secondItem="Gz1-QQ-3ch" secondAttribute="centerY" constant="-200" id="iwj-Ou-XJI"/>
+                            <constraint firstItem="P5z-EN-gfg" firstAttribute="width" secondItem="Gz1-QQ-3ch" secondAttribute="width" multiplier="0.5" id="p3k-sK-C7d"/>
+                            <constraint firstItem="aEP-Yz-T5x" firstAttribute="centerX" secondItem="Gz1-QQ-3ch" secondAttribute="centerX" id="prJ-oG-CGP"/>
+                            <constraint firstItem="lhQ-rZ-Lgj" firstAttribute="centerX" secondItem="Gz1-QQ-3ch" secondAttribute="centerX" id="q4X-IS-yBf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0j-bC-MmL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="607" y="-527"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="2PI-JS-aYD">
+            <objects>
+                <viewController id="HlE-1W-7R1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fNo-47-jvT"/>
+                        <viewControllerLayoutGuide type="bottom" id="bRS-m3-gXe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yZh-xU-sZz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.71372549019607845" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FcM-8W-pdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1287" y="-527"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="button" width="260" height="50"/>
+        <image name="icon" width="69" height="93"/>
+        <image name="logoname" width="287" height="51"/>
+    </resources>
 </document>
