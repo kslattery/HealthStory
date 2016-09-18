@@ -11,10 +11,11 @@ import Alamofire
 import SwiftyJSON
 
 class HomeVC : UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    FHIRManager.initialize()
-  
-  }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        FHIRManager.instance.getPerson()
+        FHIRManager.instance.getConditions("1551992")
+        
+    }
 }
