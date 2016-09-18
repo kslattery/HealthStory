@@ -12,6 +12,7 @@ import UIKit
 struct FamilyMember {
   var name : String
   var image : UIImage?
+  var id : String
 }
 
 class FamilyVC : UIViewController {
@@ -30,14 +31,20 @@ class FamilyVC : UIViewController {
     familyCollectionView.dataSource = self
     familyCollectionView.delegate = self
     
-    family.append(FamilyMember(name: "Kevin", image: UIImage(named: "theGuy")))
-    family.append(FamilyMember(name: "Emilie", image: UIImage(named: "theGuy")))
-    family.append(FamilyMember(name: "Katie", image: UIImage(named: "theGuy")))
-    family.append(FamilyMember(name: "Seamus", image: UIImage(named: "theGuy")))
-    family.append(FamilyMember(name: "Nora", image: UIImage(named: "theGuy")))
+    family.append(FamilyMember(name: "Kevin", image: UIImage(named: "theGuy"), id: ""))
+    family.append(FamilyMember(name: "Emilie", image: UIImage(named: "theGuy"), id: ""))
+    family.append(FamilyMember(name: "Katie", image: UIImage(named: "theGuy"), id: ""))
+    family.append(FamilyMember(name: "Seamus", image: UIImage(named: "theGuy"), id: ""))
+    family.append(FamilyMember(name: "Nora", image: UIImage(named: "theGuy"), id: ""))
     
     familyCollectionView.reloadData()
     
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "toTheGuy" {
+      sender.guyName.text
+    }
   }
   
 }

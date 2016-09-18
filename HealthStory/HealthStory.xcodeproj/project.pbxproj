@@ -18,7 +18,7 @@
 		CB132DF91D8DE7350091F76F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB132DF71D8DE7350091F76F /* LaunchScreen.storyboard */; };
 		CB132E041D8DE7350091F76F /* HealthStoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB132E031D8DE7350091F76F /* HealthStoryTests.swift */; };
 		CB132E0F1D8DE7350091F76F /* HealthStoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB132E0E1D8DE7350091F76F /* HealthStoryUITests.swift */; };
-		CB132E2D1D8DF2A10091F76F /* IndividualStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB132E2C1D8DF2A10091F76F /* IndividualStory.swift */; };
+		CB132E2D1D8DF2A10091F76F /* IndividualStoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB132E2C1D8DF2A10091F76F /* IndividualStoryVC.swift */; };
 		CB132E321D8DF50B0091F76F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB132E311D8DF50B0091F76F /* Foundation.framework */; };
 		CB91C7661D8E0EAC00A899F3 /* FHIRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91C7651D8E0EAC00A899F3 /* FHIRManager.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +72,7 @@
 		CB132E0A1D8DE7350091F76F /* HealthStoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthStoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB132E0E1D8DE7350091F76F /* HealthStoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoryUITests.swift; sourceTree = "<group>"; };
 		CB132E101D8DE7350091F76F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB132E2C1D8DF2A10091F76F /* IndividualStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualStory.swift; sourceTree = "<group>"; };
+		CB132E2C1D8DF2A10091F76F /* IndividualStoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualStoryVC.swift; sourceTree = "<group>"; };
 		CB132E311D8DF50B0091F76F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB91C7651D8E0EAC00A899F3 /* FHIRManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRManager.swift; sourceTree = "<group>"; };
 		E767C059113AF57D5CB171E0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				CB132DF51D8DE7350091F76F /* Assets.xcassets */,
 				CB132DF71D8DE7350091F76F /* LaunchScreen.storyboard */,
 				CB132DFA1D8DE7350091F76F /* Info.plist */,
-				CB132E2C1D8DF2A10091F76F /* IndividualStory.swift */,
+				CB132E2C1D8DF2A10091F76F /* IndividualStoryVC.swift */,
 				CB91C7651D8E0EAC00A899F3 /* FHIRManager.swift */,
 				2F20FE4F1D8E3A36005FE3FE /* ApiConstants.swift */,
 				2F20FE531D8E85ED005FE3FE /* FirstHomeVC.swift */,
@@ -369,7 +369,7 @@
 				2F20FE521D8E80A6005FE3FE /* FamilyVC.swift in Sources */,
 				2FB708B91D8E26AB005DEF9A /* HomeVC.swift in Sources */,
 				2F20FE501D8E3A36005FE3FE /* ApiConstants.swift in Sources */,
-				CB132E2D1D8DF2A10091F76F /* IndividualStory.swift in Sources */,
+				CB132E2D1D8DF2A10091F76F /* IndividualStoryVC.swift in Sources */,
 				CB91C7661D8E0EAC00A899F3 /* FHIRManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
