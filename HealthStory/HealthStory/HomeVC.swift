@@ -39,6 +39,13 @@ class HomeVC : UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func addFHIRData() {
+        // Patient IDs:
+        // Male adult 967332
+        // Female adult 1551992
+        // Female child 1032702
+        // Female child 1134281
+        // Male child 99912345
+        //
         FHIRManager.instance.getConditions("1551992") { json in
             let conditions = json["entry"]
             for condition in conditions {
@@ -96,7 +103,7 @@ class HomeVC : UIViewController, UITableViewDataSource, UITableViewDelegate {
                 let indexToRemove = selectedConditionsArray.indexOf((selectedRow.textLabel?.text)!)
                 selectedConditionsArray.removeAtIndex(indexToRemove!)
             }
-        
+
         }
     }
     
