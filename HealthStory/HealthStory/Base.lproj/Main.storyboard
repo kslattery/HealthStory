@@ -16,7 +16,21 @@
                     <view key="view" contentMode="scaleToFill" id="Gz1-QQ-3ch">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="lhQ-rZ-Lgj">
+                                <rect key="frame" x="265" y="53.5" width="69" height="93"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoname" translatesAutoresizingMaskIntoConstraints="NO" id="n3O-dQ-GmQ">
+                                <rect key="frame" x="156" y="157" width="287" height="51"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.71372549019607845" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="n3O-dQ-GmQ" firstAttribute="centerX" secondItem="Gz1-QQ-3ch" secondAttribute="centerX" id="D4i-Rr-wrz"/>
+                            <constraint firstItem="n3O-dQ-GmQ" firstAttribute="top" secondItem="lhQ-rZ-Lgj" secondAttribute="bottom" constant="10" id="dXC-Cp-SdA"/>
+                            <constraint firstItem="lhQ-rZ-Lgj" firstAttribute="centerY" secondItem="Gz1-QQ-3ch" secondAttribute="centerY" constant="-200" id="iwj-Ou-XJI"/>
+                            <constraint firstItem="lhQ-rZ-Lgj" firstAttribute="centerX" secondItem="Gz1-QQ-3ch" secondAttribute="centerX" id="q4X-IS-yBf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0j-bC-MmL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +38,8 @@
             <point key="canvasLocation" x="607" y="-527"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="69" height="93"/>
+        <image name="logoname" width="287" height="51"/>
+    </resources>
 </document>
