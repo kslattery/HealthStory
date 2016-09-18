@@ -31,11 +31,11 @@ class FamilyVC : UIViewController {
     familyCollectionView.dataSource = self
     familyCollectionView.delegate = self
     
-    family.append(FamilyMember(name: "Kevin", image: UIImage(named: "theGuy"), id: "967332"))
-    family.append(FamilyMember(name: "Emilie", image: UIImage(named: "theGuy"), id: "1551992"))
-    family.append(FamilyMember(name: "Katie", image: UIImage(named: "theGuy"), id: "1032702"))
-    family.append(FamilyMember(name: "Seamus", image: UIImage(named: "theGuy"), id: "99912345"))
-    family.append(FamilyMember(name: "Nora", image: UIImage(named: "theGuy"), id: "1134281"))
+    family.append(FamilyMember(name: "Kevin", image: UIImage(named: "Kevin"), id: "967332"))
+    family.append(FamilyMember(name: "Emilie", image: UIImage(named: "Emilie"), id: "1551992"))
+    family.append(FamilyMember(name: "Katie", image: UIImage(named: "Katie"), id: "1032702"))
+    family.append(FamilyMember(name: "Seamus", image: UIImage(named: "Seamus"), id: "99912345"))
+    family.append(FamilyMember(name: "Nora", image: UIImage(named: "Nora"), id: "1134281"))
     
     familyCollectionView.reloadData()
     
