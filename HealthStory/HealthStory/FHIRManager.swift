@@ -7,8 +7,4 @@
 //
 
 import Foundation
-
 import Alamofire
-
-Alamofire.request(<#T##URLRequest: URLRequestConvertible##URLRequestConvertible#>)
-
