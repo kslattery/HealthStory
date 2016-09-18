@@ -104,22 +104,62 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoname" translatesAutoresizingMaskIntoConstraints="NO" id="a7s-Gd-wd0">
                                 <rect key="frame" x="180" y="4" width="240" height="81"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcc-tn-qpY">
-                                <rect key="frame" x="0.0" y="90" width="600" height="60"/>
-                                <color key="backgroundColor" red="0.57647058823529407" green="0.81176470588235294" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5rA-De-yDp">
+                                <rect key="frame" x="0.0" y="90" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Kpd-Uj-I2O">
+                                    <size key="itemSize" width="10" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="familycell" id="gbQ-D1-02M" customClass="CellGuy" customModule="HealthStory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="144"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="theGuy" translatesAutoresizingMaskIntoConstraints="NO" id="dZb-s6-Ivo">
+                                                    <rect key="frame" x="5.5" y="8" width="101" height="121"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tu4-UL-LRE">
+                                                    <rect key="frame" x="23" y="120" width="66" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="dZb-s6-Ivo" firstAttribute="top" secondItem="gbQ-D1-02M" secondAttribute="topMargin" id="1T2-Ur-GiH"/>
+                                            <constraint firstItem="Tu4-UL-LRE" firstAttribute="top" secondItem="dZb-s6-Ivo" secondAttribute="bottom" constant="-9" id="1ym-uM-frG"/>
+                                            <constraint firstItem="Tu4-UL-LRE" firstAttribute="centerX" secondItem="dZb-s6-Ivo" secondAttribute="centerX" id="GhS-oN-uka"/>
+                                            <constraint firstItem="dZb-s6-Ivo" firstAttribute="width" secondItem="gbQ-D1-02M" secondAttribute="width" multiplier="0.9" id="Hw6-iO-nJK"/>
+                                            <constraint firstItem="dZb-s6-Ivo" firstAttribute="centerX" secondItem="gbQ-D1-02M" secondAttribute="centerX" id="ksh-Jh-CHh"/>
+                                        </constraints>
+                                        <size key="customSize" width="112" height="144"/>
+                                        <connections>
+                                            <outlet property="guyName" destination="Tu4-UL-LRE" id="hAc-hW-A7o"/>
+                                            <outlet property="guyPicture" destination="dZb-s6-Ivo" id="nF3-zq-cez"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GN6-nN-9lp" firstAttribute="top" secondItem="fNo-47-jvT" secondAttribute="bottom" constant="-10" id="0Ln-jH-rpu"/>
-                            <constraint firstItem="Kcc-tn-qpY" firstAttribute="top" secondItem="GN6-nN-9lp" secondAttribute="bottom" id="AbI-xh-ZTD"/>
+                            <constraint firstItem="5rA-De-yDp" firstAttribute="centerX" secondItem="yZh-xU-sZz" secondAttribute="centerX" id="6n8-i1-a0l"/>
+                            <constraint firstItem="5rA-De-yDp" firstAttribute="width" secondItem="yZh-xU-sZz" secondAttribute="width" id="I1N-8V-Z5N"/>
                             <constraint firstItem="GN6-nN-9lp" firstAttribute="height" secondItem="yZh-xU-sZz" secondAttribute="height" multiplier="0.15" id="Rdm-yQ-lcI"/>
                             <constraint firstItem="GN6-nN-9lp" firstAttribute="top" secondItem="yZh-xU-sZz" secondAttribute="topMargin" id="a61-uQ-D5k"/>
                             <constraint firstItem="GN6-nN-9lp" firstAttribute="centerX" secondItem="yZh-xU-sZz" secondAttribute="centerX" id="aJn-I3-Xm2"/>
-                            <constraint firstItem="Kcc-tn-qpY" firstAttribute="width" secondItem="yZh-xU-sZz" secondAttribute="width" id="hT4-dx-6Xu"/>
-                            <constraint firstItem="Kcc-tn-qpY" firstAttribute="height" secondItem="yZh-xU-sZz" secondAttribute="height" multiplier="0.1" id="jx9-nS-Ote"/>
+                            <constraint firstItem="5rA-De-yDp" firstAttribute="top" secondItem="GN6-nN-9lp" secondAttribute="bottom" id="kbd-qA-hAl"/>
                             <constraint firstItem="GN6-nN-9lp" firstAttribute="width" secondItem="yZh-xU-sZz" secondAttribute="width" id="lS0-jd-JP4"/>
-                            <constraint firstItem="Kcc-tn-qpY" firstAttribute="centerX" secondItem="yZh-xU-sZz" secondAttribute="centerX" id="mvk-4C-fG6"/>
+                            <constraint firstItem="5rA-De-yDp" firstAttribute="height" secondItem="yZh-xU-sZz" secondAttribute="height" id="qyE-pf-r9e"/>
                             <constraint firstItem="a7s-Gd-wd0" firstAttribute="centerX" secondItem="GN6-nN-9lp" secondAttribute="centerX" id="rSy-j4-VTf"/>
                             <constraint firstItem="a7s-Gd-wd0" firstAttribute="height" secondItem="GN6-nN-9lp" secondAttribute="height" multiplier="0.9" id="uuz-db-XRM"/>
                             <constraint firstItem="a7s-Gd-wd0" firstAttribute="centerY" secondItem="GN6-nN-9lp" secondAttribute="centerY" id="w7R-ri-xdV"/>
@@ -141,5 +181,6 @@
         <image name="button" width="260" height="50"/>
         <image name="icon" width="69" height="93"/>
         <image name="logoname" width="287" height="51"/>
+        <image name="theGuy" width="121" height="121"/>
     </resources>
 </document>
