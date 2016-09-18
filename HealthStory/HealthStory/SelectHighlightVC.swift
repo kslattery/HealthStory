@@ -17,6 +17,7 @@ class SelectHighlightVC : UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var prevVC : IndividualStoryVC?
+    var personID : String?
     
     var items : [String] = []
     var itemDates : [String] = []
@@ -43,14 +44,15 @@ class SelectHighlightVC : UIViewController {
         // Female child 1134281
         // Male child 99912345
         //
-        FHIRManager.instance.getConditions("1551992") { json in
+        FHIRManager.instance.getConditions(personID!) { json in
             let conditions = json["entry"]
             for condition in conditions {
                 let coding = condition.1["resource"]["code"]["coding"]
+                //let onsetDate = condition.1["resource"]["onsetDateTime"]
                 for entry in coding {
                     //print(entry.1["display"])
                     self.items.append("\(entry.1["display"])")
-                    self.itemDates.append("9/3/2016")
+                    self.itemDates.append("\(condition.1["resource"]["onsetDateTime"])")
                 }
             }
             dispatch_async(dispatch_get_main_queue(),{

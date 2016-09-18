@@ -47,6 +47,7 @@ class IndividualStoryVC: UIViewController {
         if segue.identifier == "goToH" {
             let vc = segue.destinationViewController as! SelectHighlightVC
             vc.prevVC = self
+            vc.personID = id
         }
     }
 }
