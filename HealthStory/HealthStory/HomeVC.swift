@@ -16,6 +16,6 @@ class HomeVC : UIViewController {
         super.viewDidLoad()
         FHIRManager.instance.getPerson()
         FHIRManager.instance.getConditions("1551992")
-        
+      
     }
 }
