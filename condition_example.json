@@ -1,0 +1,53 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://fhir-api-dstu2.smarthealthit.org/Condition?patient=hca-pat-82"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://fhir-api-dstu2.smarthealthit.org/Condition/hca-con-9e851f3b0a08",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "hca-con-9e851f3b0a08",
+        "meta": {
+          "versionId": "203529",
+          "lastUpdated": "2016-03-09T15:35:53.082+00:00"
+        },
+        "patient": {
+          "reference": "Patient/hca-pat-82",
+          "display": "Hendricks Christy"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "448952004",
+              "display": "Infiltrating duct carcinoma of female breast"
+            }
+          ],
+          "text": "IDC"
+        },
+        "category": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "39154008",
+              "display": "Clinical diagnosis"
+            }
+          ]
+        },
+        "clinicalStatus": "active",
+        "verificationStatus": "confirmed",
+        "onsetDateTime": "2014-01-01"
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}
