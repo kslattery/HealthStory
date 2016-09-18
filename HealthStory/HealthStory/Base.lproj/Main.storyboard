@@ -202,7 +202,7 @@
                                 <rect key="frame" x="0.0" y="90" width="600" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCD-LJ-O6P">
-                                        <rect key="frame" x="20" y="15" width="86" height="30"/>
+                                        <rect key="frame" x="494" y="15" width="86" height="30"/>
                                         <state key="normal" title="Add to Story">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -210,12 +210,29 @@
                                             <segue destination="3qE-ie-93P" kind="show" identifier="goToH" id="fXQ-n9-ZtP"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPi-yR-vnU">
+                                        <rect key="frame" x="20" y="15" width="34" height="30"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="0.95294117649999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="HlE-1W-7R1" kind="show" id="hzU-L4-cU4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.57647058823529407" green="0.81176470588235294" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="OCD-LJ-O6P" firstAttribute="centerY" secondItem="Tzs-pE-us8" secondAttribute="centerY" id="3Bp-yV-ERU"/>
+                                    <constraint firstAttribute="trailing" secondItem="OCD-LJ-O6P" secondAttribute="trailing" constant="20" id="E0E-o5-AFc"/>
+                                    <constraint firstItem="oPi-yR-vnU" firstAttribute="leading" secondItem="Tzs-pE-us8" secondAttribute="leading" constant="20" id="Jfh-tp-0Zn"/>
+                                    <constraint firstItem="oPi-yR-vnU" firstAttribute="centerY" secondItem="Tzs-pE-us8" secondAttribute="centerY" id="Kdu-1n-xcg"/>
                                     <constraint firstItem="OCD-LJ-O6P" firstAttribute="leading" secondItem="Tzs-pE-us8" secondAttribute="leading" constant="20" id="qdl-9Z-bRK"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qdl-9Z-bRK"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOQ-RE-cJE">
                                 <rect key="frame" x="-59" y="0.0" width="718" height="90"/>
@@ -223,16 +240,6 @@
                                 <items>
                                     <navigationItem id="Wb4-vq-jho">
                                         <nil key="title"/>
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="74Q-9y-hWq">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fX1-4A-iJC">
-                                                <rect key="frame" x="20" y="53" width="159" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Back"/>
-                                                <connections>
-                                                    <segue destination="HlE-1W-7R1" kind="show" id="fsO-G6-gYb"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -454,6 +461,6 @@
         <image name="theGuy" width="121" height="121"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fsO-G6-gYb"/>
+        <segue reference="hzU-L4-cU4"/>
     </inferredMetricsTieBreakers>
 </document>
