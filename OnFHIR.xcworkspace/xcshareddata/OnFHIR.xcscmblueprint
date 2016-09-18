@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7EE8A900386999CCDCDC7E188808A60FCA6B217C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CF35077FD7A44320981FE5EE63723881BC15523F" : 0,
+    "10B73D0B7CE5B1CD363428FDF4A01A2A9E2F0357" : 0,
+    "23AAFBD591BA505FBAABBB27621941E6A9803CE6" : 0,
+    "7EE8A900386999CCDCDC7E188808A60FCA6B217C" : 0,
+    "2045D86BC5D391C299DCC498309E722E037BFF4E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "43D3838F-01F1-4330-B3F9-559AEE3B995D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CF35077FD7A44320981FE5EE63723881BC15523F" : "Swift-SMART\/Swift-FHIR\/",
+    "10B73D0B7CE5B1CD363428FDF4A01A2A9E2F0357" : "Swift-SMART\/OAuth2\/SwiftKeychain\/",
+    "23AAFBD591BA505FBAABBB27621941E6A9803CE6" : "Swift-SMART\/",
+    "7EE8A900386999CCDCDC7E188808A60FCA6B217C" : "HealthStory\/",
+    "2045D86BC5D391C299DCC498309E722E037BFF4E" : "Swift-SMART\/OAuth2\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "OnFHIR",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OnFHIR.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/p2\/SwiftKeychain",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "10B73D0B7CE5B1CD363428FDF4A01A2A9E2F0357"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/p2\/OAuth2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2045D86BC5D391C299DCC498309E722E037BFF4E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/smart-on-fhir\/Swift-SMART.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "23AAFBD591BA505FBAABBB27621941E6A9803CE6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:kslattery\/HealthStory.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7EE8A900386999CCDCDC7E188808A60FCA6B217C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/smart-on-fhir\/Swift-FHIR.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CF35077FD7A44320981FE5EE63723881BC15523F"
+    }
+  ]
+}
