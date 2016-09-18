@@ -11,37 +11,29 @@ import Alamofire
 import SwiftyJSON
 
 
-class SelectHighlightVC : UIViewController, UITableViewDataSource, UITableViewDelegate {
-  
+class SelectHighlightVC : UIViewController {
+    
+    @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
     var prevVC : IndividualStoryVC?
-    var tableView:UITableView?
+    
     var items : [String] = []
+    var itemDates : [String] = []
     var selectedConditionsArray : [String] = []
+    var selectedConditionDatesArray : [String] = []
     
     override func viewWillAppear(animated: Bool) {
-        let frame:CGRect = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height-100)
-        self.tableView = UITableView(frame: frame)
-        self.tableView?.dataSource = self
-        self.tableView?.delegate = self
-        self.view.addSubview(self.tableView!)
-        self.tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
         addFHIRData()
-        
-        let btn = UIButton(frame: CGRect(x: 0, y: 25, width: self.view.frame.width, height: 50))
-        btn.backgroundColor = UIColor.cyanColor()
-        btn.setTitle("Done", forState: UIControlState.Normal)
-        btn.addTarget(self, action: #selector(SelectHighlightVC.completeSelection), forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(btn)
     }
     
-    func completeSelection () {
+    @IBAction func btnPress(sender: AnyObject) {
         prevVC?.selectedConditionsArray = self.selectedConditionsArray
+        prevVC?.selectedConditionDatesArray = self.selectedConditionDatesArray
         prevVC?.onSelectionChange()
-       self.dismissViewControllerAnimated(true, completion: nil)
-      
-      
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     
     func addFHIRData() {
         // Patient IDs:
@@ -58,29 +50,28 @@ class SelectHighlightVC : UIViewController, UITableViewDataSource, UITableViewDe
                 for entry in coding {
                     //print(entry.1["display"])
                     self.items.append("\(entry.1["display"])")
-                    
+                    self.itemDates.append("9/3/2016")
                 }
             }
             dispatch_async(dispatch_get_main_queue(),{
-                self.tableView?.reloadData()
+                print(self.items.count)
+                self.tableView.reloadData()
             })
         }
-/*
- FHIRManager.instance.getProcedures("1551992") { json in
-            let conditions = json["entry"]
-            for condition in conditions {
-                let coding = condition.1["resource"]["code"]["coding"]
-                for entry in coding {
-                    print(entry.1["display"])
-                    self.items.append("\(entry.1["display"])")
-                    
-                }
-            }
-            dispatch_async(dispatch_get_main_queue(),{
-                self.tableView?.reloadData()
-            })
-*/
+        
     }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+    }
+    
+}
+
+extension SelectHighlightVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
@@ -88,36 +79,39 @@ class SelectHighlightVC : UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
-        let currentCondition = self.items[indexPath.row]
-        cell.textLabel?.text = currentCondition
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! MyConditionCell2
         
+        //cell.textLabel?.text = self.items[indexPath.row]
+        
+        cell.theDate?.text = self.itemDates[indexPath.row]
+        cell.theEvent?.text = self.items[indexPath.row]
         
         return cell
     }
     
     func tableView(tableView:UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        if let selectedRow = tableView.cellForRowAtIndexPath(indexPath) {
+        if let selectedRow = tableView.cellForRowAtIndexPath(indexPath) as? MyConditionCell2 {
             if selectedRow.accessoryType == .None {
                 selectedRow.accessoryType = .Checkmark
-                selectedConditionsArray.append((selectedRow.textLabel?.text)!)
+                selectedConditionsArray.append((selectedRow.theEvent?.text)!)
+                selectedConditionDatesArray.append((selectedRow.theDate?.text)!)
             }
             else {
                 selectedRow.accessoryType = .None
-                let indexToRemove = selectedConditionsArray.indexOf((selectedRow.textLabel?.text)!)
+                let indexToRemove = selectedConditionsArray.indexOf((selectedRow.theEvent?.text)!)
                 selectedConditionsArray.removeAtIndex(indexToRemove!)
+                selectedConditionDatesArray.removeAtIndex(indexToRemove!)
             }
-
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        FHIRManager.instance.getPerson()
-//        FHIRManager.instance.getConditions("1551992", onCompletion: conditions)
-//        FHIRManager.instance.getProcedures("1551992")
-//        FHIRManager.instance.getMedicationStatement("1551992")
-    }
+    
+}
+
+class MyConditionCell2 : UITableViewCell {
+    @IBOutlet weak var theDate: UILabel!
+    @IBOutlet weak var theEvent: UILabel!
+    
     
 }
