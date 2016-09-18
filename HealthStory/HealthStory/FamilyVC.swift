@@ -16,18 +16,27 @@ struct FamilyMember {
 
 class FamilyVC : UIViewController {
   
+  @IBOutlet weak var familyCollectionView: UICollectionView!
+  
   var family : [FamilyMember] = []
   
-  
   override func viewDidLoad() {
+  
+  }
+  
+  
+  override func viewDidAppear(animated: Bool) {
     
-    family[0] = FamilyMember(name: "Kevin", image: UIImage(named: "theGuy"))
-    family[1] = FamilyMember(name: "Emilie", image: UIImage(named: "theGuy"))
-    family[2] = FamilyMember(name: "Katie", image: UIImage(named: "theGuy"))
-    family[3] = FamilyMember(name: "Seamus", image: UIImage(named: "theGuy"))
-    family[4] = FamilyMember(name: "Nora", image: UIImage(named: "theGuy"))
+    familyCollectionView.dataSource = self
+    familyCollectionView.delegate = self
     
+    family.append(FamilyMember(name: "Kevin", image: UIImage(named: "theGuy")))
+    family.append(FamilyMember(name: "Emilie", image: UIImage(named: "theGuy")))
+    family.append(FamilyMember(name: "Katie", image: UIImage(named: "theGuy")))
+    family.append(FamilyMember(name: "Seamus", image: UIImage(named: "theGuy")))
+    family.append(FamilyMember(name: "Nora", image: UIImage(named: "theGuy")))
     
+    familyCollectionView.reloadData()
     
   }
   
@@ -37,6 +46,10 @@ extension FamilyVC : UICollectionViewDataSource, UICollectionViewDelegate {
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return family.count
+  }
+  
+  func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    return 1
   }
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

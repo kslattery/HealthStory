@@ -7,10 +7,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--HomeVC-->
+        <!--First HomeVC-->
         <scene sceneID="XK7-Oy-J06">
             <objects>
-                <viewController id="rhd-rM-wO3" customClass="HomeVC" customModule="HealthStory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rhd-rM-wO3" customClass="FirstHomeVC" customModule="HealthStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CVS-0Y-dEs"/>
                         <viewControllerLayoutGuide type="bottom" id="b2W-sm-TOe"/>
@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="607" y="-527"/>
         </scene>
-        <!--View Controller-->
+        <!--FamilyVC-->
         <scene sceneID="2PI-JS-aYD">
             <objects>
-                <viewController id="HlE-1W-7R1" sceneMemberID="viewController">
+                <viewController id="HlE-1W-7R1" customClass="FamilyVC" customModule="HealthStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fNo-47-jvT"/>
                         <viewControllerLayoutGuide type="bottom" id="bRS-m3-gXe"/>
@@ -108,7 +108,7 @@
                                 <rect key="frame" x="0.0" y="90" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Kpd-Uj-I2O">
-                                    <size key="itemSize" width="10" height="50"/>
+                                    <size key="itemSize" width="112" height="144"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -133,6 +133,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="dZb-s6-Ivo" firstAttribute="top" secondItem="gbQ-D1-02M" secondAttribute="topMargin" id="1T2-Ur-GiH"/>
                                             <constraint firstItem="Tu4-UL-LRE" firstAttribute="top" secondItem="dZb-s6-Ivo" secondAttribute="bottom" constant="-9" id="1ym-uM-frG"/>
@@ -171,6 +172,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="familyCollectionView" destination="5rA-De-yDp" id="QrA-E9-y2B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcM-8W-pdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
